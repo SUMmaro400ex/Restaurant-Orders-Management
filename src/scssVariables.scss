@@ -15,21 +15,21 @@ $borderColor: rgb(230, 230, 230);
 }
 
 @mixin h1 {
-  font-size: 20px;
+  font-size: 26px;
   margin: 0 auto;
 }
 
 @mixin h4 {
-  font-size: 14px;
+  font-size: 18px;
   margin: 0 auto;
 }
 
 @mixin h5 {
-  font-size: 12px;
+  font-size: 16px;
   margin: 0 auto;
 }
 
 @mixin p {
-  font-size: 10px;
+  font-size: 14px;
   margin: 0 auto;
 }
