@@ -1,0 +1,46 @@
+@import '../../scssVariables.scss';
+
+.wrapper {
+  @include card;
+  height: fit-content;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto auto auto auto;
+  column-gap: 12px;
+  & > div {
+    width: fit-content;
+  }
+  h1 {
+    @include h1;
+  }
+  h5 {
+    @include h5;
+  }
+  h4 {
+    @include h4;
+  }
+  .infoSection {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    color: white;
+  }
+  .fulfilled {
+    @extend .infoSection;
+    background-color: $fulfilled;
+  }
+  .inProgress {
+    @extend .infoSection;
+    background-color: $success;
+  }
+  .pending {
+    @extend .infoSection;
+    background-color: $pending;
+  }
+  .cancelled {
+    @extend .infoSection;
+    background-color: $error;
+  }
+}

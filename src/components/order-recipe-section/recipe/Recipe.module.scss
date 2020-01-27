@@ -1,0 +1,23 @@
+@import "../../../scssVariables.scss";
+
+.wrapper {
+  @include card;
+  width: 200px;
+  height: fit-content;
+  justify-content: center;
+  display: grid;
+  row-gap: 12px;
+  text-align: center;
+  & button {
+    color: white;
+    background: $success;
+    border: none;
+    border-radius: $borderRadius;
+    outline: none;
+    cursor: pointer;
+    &:disabled {
+      background: $borderColor;
+      cursor: not-allowed;
+    }
+  }
+}

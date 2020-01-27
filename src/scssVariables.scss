@@ -1,0 +1,35 @@
+$boxShadow: 0 4px 20px 0 rgba(0,0,0,.05);
+$borderRadius: .5rem;
+$fulfilled: rgb(113, 103, 240);
+$success: #28c76f;
+$pending: #ff9f43;
+$error: #ea5455;
+$borderColor: rgb(230, 230, 230);
+
+@mixin card {
+  background-color: white;
+  box-shadow: $boxShadow;
+  border-radius: $borderRadius;
+  box-sizing: border-box;
+  padding: .8rem 1rem;
+}
+
+@mixin h1 {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+@mixin h4 {
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+@mixin h5 {
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+@mixin p {
+  font-size: 10px;
+  margin: 0 auto;
+}
