@@ -4,10 +4,10 @@ import OrdersContext from '../../contexts/OrdersContext.container';
 
 const TopBarContainer: React.FC = () => {
   const { orders } = useContext(OrdersContext.UseContext);
-  const { pending, inProgress, cancelled, fulfilled } = orders.reduce((acc, order) => {
+  const { Pending: pending, 'In Progress': inProgress, cancelled, fulfilled } = orders.reduce((acc, order) => {
     ++acc[order.status];
     return acc;
-  }, {pending:  0, inProgress: 0, cancelled: 0, fulfilled: 0})
+  }, {'Pending':  0, 'In Progress': 0, cancelled: 0, fulfilled: 0})
   return <TopBar pending={pending} inProgress={inProgress} cancelled={cancelled} fulfilled={fulfilled} />
 };
 

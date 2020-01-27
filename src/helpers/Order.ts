@@ -4,8 +4,8 @@ import { IAPIOrder } from '../queries/queries';
 
 export enum status {
   CANCELLED = 'cancelled',
-  PENDING = 'pending',
-  IN_PROGRESS = 'inProgress',
+  PENDING = 'Pending',
+  IN_PROGRESS = 'In Progress',
   FULFILLED = 'fulfilled'
 }
 const threeMinutesMS = 3 * 60 * 1000;

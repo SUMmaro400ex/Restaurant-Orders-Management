@@ -15,12 +15,14 @@ const OrdersGrid: React.FC<IOrdersGridProps> = ({ orders, cancelOrder, fulfillOr
       <div>
         <h5>Recipe</h5>
         <h5>Time</h5>
+        <h5>Status</h5>
         <h5>Action</h5>
       </div>
       { orders.map(order => (
         <div key={order.id}>
           <p>{order.recipe}</p>
           <p>{moment(order.createdAt).format('h:mm:ss a')}</p>
+          <p>{order.status}</p>
           { order.status === status.PENDING
             ? <i className={`material-icons ${classes.cancel}`} onClick={cancelOrder(order)}>cancel</i>
             : <i className={`material-icons ${classes.fulfill}`} onClick={fulfillOrder(order)}>check_circle</i>
